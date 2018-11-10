@@ -34,7 +34,7 @@
 \newpage
 \begin{tikzpicture}
 	\begin{axis}[width = 12cm, grid = major, xlabel = {$x$ координата}, ylabel = {$y$ координата}]
-		\addplot+ [x = x, y = y, line width = 1pt] table{data.dat};
+		\addplot+ [x = x, y = y, only marks] table{data.dat};
 		\addplot+ [domain = -10:10, no marks, line width = 2pt, color = black] {3.0612*x + 2.6882};
 	\end{axis}
 \end{tikzpicture}
