@@ -2,20 +2,21 @@
 \usepackage{pgf,tikz,pgfplots}
 \usepackage[russian]{babel}
 
+\usepackage{color}
+
+\definecolor{mylightgray}{rgb}{0.94, 0.94, 0.94}
+
 \usepackage{listings}
 \lstset{ 
-	backgroundcolor=\color{white},   
+	backgroundcolor=\color{mylightgray},   
 	basicstyle=\scriptsize\ttfamily, 
 	breaklines=true,
-	frame=single,
 	keywordstyle=\color{blue},
 	language=Python,
-	morekeywords={*,...},
 	numbers=left,
 	numbersep=5pt,
-	numberstyle=\tiny\sffamily\color{gray},
 	stringstyle=\color{red},
-	tabsize=4,
+	tabsize=2,
 }
 
 \usepackage[]{algorithm2e}
@@ -32,9 +33,9 @@
 
 \newpage
 \begin{tikzpicture}
-	\begin{axis}
-		\addplot+ [x = x, y = y, no marks, line width = 1pt] table{data.dat};
-		\addplot+ [domain = -10:10, no marks, line width = 1pt] {3.0612*x + 2.6882};
+	\begin{axis}[width = 15cm, grid = major, xlabel = {$x$ координата}, ylabel = {$y$ координата}]
+		\addplot+ [x = x, y = y, line width = 1pt] table{data.dat};
+		\addplot+ [domain = -10:10, no marks, line width = 2pt, color = black] {3.0612*x + 2.6882};
 	\end{axis}
 \end{tikzpicture}
 
